@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>October Revision Full Booklet - Prep 3 Math | Mr. Ahmed Abd El-Motaal</title>
+    <!-- KaTeX for Crisp Mathematical Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --primary-blue: #1e3a8a;
+            --accent-blue: #2563eb;
+            --pastel-blue: #eff6ff;
+            --pastel-blue-dark: #dbeafe;
+            --border-blue: #bfdbfe;
+            --card-border: #cbd5e1;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --success-bg: #f0fdf4;
+            --success-border: #86efac;
+            --warning-bg: #fefce8;
+            --warning-border: #fde047;
+            --danger-bg: #fef2f2;
+            --danger-border: #fca5a5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: #e2e8f0;
+            padding: 25px 15px;
+            line-height: 1.5;
+        }
+
+        /* Floating Action Bar (Screen Only) */
+        .action-bar {
+            max-width: 210mm;
+            margin: 0 auto 20px auto;
+            background: #ffffff;
+            padding: 12px 20px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid var(--border-blue);
+        }
+        .action-bar span {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        .print-btn {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: transform 0.15s ease;
+        }
+        .print-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* A4 Page Container */
+        .booklet-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 12mm 14mm;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+        }
+
+        /* Master Banner Header */
+        .master-header {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 55%, #bfdbfe 100%);
+            border: 2px solid #93c5fd;
+            border-radius: 16px;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8), 0 4px 10px rgba(30, 58, 138, 0.05);
+        }
+        .header-left .badge-pill {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: #ffffff;
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .header-left h1 {
+            font-size: 21px;
+            color: var(--primary-blue);
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+        .header-left p {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        .header-right {
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 10px 16px;
+            border-radius: 12px;
+            border: 1.5px solid #ffffff;
+        }
+        .header-right h2 {
+            font-size: 17.5px;
+            color: var(--primary-blue);
+            font-weight: 800;
+            line-height: 1.3;
+        }
+        .header-right .teacher-en {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: block;
+            margin-bottom: 4px;
+        }
+        .header-right .contact-info {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11.5px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* Clean Student Info Strip (No Grade, No Signature) */
+        .student-strip {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr;
+            gap: 14px;
+            background: #f8fafc;
+            border: 1.5px solid var(--border-blue);
+            border-radius: 12px;
+            padding: 10px 18px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        .student-strip div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dotted-input {
+            flex-grow: 1;
+            border-bottom: 1.5px dashed #94a3b8;
+            height: 16px;
+        }
+
+        /* Section & Unit Banners */
+        .part-banner {
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: #ffffff;
+            padding: 9px 18px;
+            border-radius: 11px;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 18px 0 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 8px rgba(30, 58, 138, 0.15);
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+        .unit-subbanner {
+            background-color: var(--pastel-blue);
+            color: var(--primary-blue);
+            border-left: 4.5px solid var(--accent-blue);
+            border-top: 1px solid var(--border-blue);
+            border-right: 1px solid var(--border-blue);
+            border-bottom: 1px solid var(--border-blue);
+            padding: 6px 14px;
+            font-weight: 700;
+            font-size: 13px;
+            margin: 12px 0 10px 0;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        /* Grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 11px;
+            margin-bottom: 11px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 11px;
+        }
+        .stack-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary Rule Cards */
+        .rule-card {
+            border: 1.5px solid var(--card-border);
+            border-radius: 12px;
+            padding: 10px 13px;
+            background: #ffffff;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .rule-card.highlight { background-color: var(--pastel-blue); border-color: #93c5fd; }
+        .rule-card.success { background-color: var(--success-bg); border-color: var(--success-border); }
+        .rule-card.warning { background-color: var(--warning-bg); border-color: var(--warning-border); }
+        .rule-card.danger { background-color: var(--danger-bg); border-color: var(--danger-border); }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px dashed #cbd5e1;
+            padding-bottom: 4px;
+        }
+        .tag {
+            font-size: 10px;
+            background: var(--accent-blue);
+            color: #ffffff;
+            padding: 1.5px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .rule-formula {
+            font-size: 13.5px;
+            margin: 5px 0;
+            text-align: center;
+            background: #f8fafc;
+            padding: 5px 8px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            overflow-x: hidden;
+        }
+        .example-box {
+            font-size: 12px;
+            color: #334155;
+            margin-top: 5px;
+            line-height: 1.45;
+        }
+        .example-box strong {
+            color: var(--primary-blue);
+        }
+
+        /* Summary Table */
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin: 8px 0 10px 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .summary-table th, .summary-table td {
+            border: 1.5px solid var(--card-border);
+            padding: 6px 10px;
+            text-align: left;
+        }
+        .summary-table th {
+            background-color: var(--pastel-blue-dark);
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* Steps Flow Bar */
+        .steps-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1.5px solid #93c5fd;
+            border-radius: 10px;
+            padding: 8px 12px;
+            margin: 10px 0;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .step-pill {
+            background: #ffffff;
+            border: 1.5px solid var(--accent-blue);
+            padding: 3px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* SVG Row for Summary */
+        .svg-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+            margin: 8px 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .svg-box {
+            border: 1.5px solid var(--card-border);
+            border-radius: 10px;
+            padding: 6px;
+            background: #f8fafc;
+            font-size: 11.5px;
+        }
+
+        /* Question Cards */
+        .q-card {
+            border: 1.5px solid var(--card-border);
+            border-radius: 12px;
+            padding: 11px 14px;
+            background: #ffffff;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.015);
+        }
+        .q-header {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            width: 100%;
+        }
+        .q-num {
+            background-color: var(--pastel-blue-dark);
+            color: var(--primary-blue);
+            border: 1.5px solid #93c5fd;
+            font-weight: 800;
+            font-size: 12px;
+            min-width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .q-content {
+            font-size: 13.5px;
+            font-weight: 500;
+            width: 100%;
+            color: var(--primary-navy);
+        }
+        .choices-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 6px;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: #334155;
+        }
+        .choices-row.three-cols {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .sub-list {
+            margin-top: 5px;
+            padding-left: 18px;
+            font-size: 12.5px;
+            color: #334155;
+        }
+
+        /* Dotted Answer Spaces */
+        .answer-space {
+            margin-top: 8px;
+            padding-top: 5px;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+        .answer-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: -10px;
+        }
+        .dot-line {
+            border-bottom: 1.5px dashed #cbd5e1;
+            width: 100%;
+            height: 7px;
+        }
+
+        /* Graph & Table Workspace for Q16 & Q17 */
+        .graph-workspace {
+            display: grid;
+            grid-template-columns: 1fr 210px;
+            gap: 14px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            align-items: center;
+        }
+        .xy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 12.5px;
+            text-align: center;
+        }
+        .xy-table th, .xy-table td {
+            border: 1.5px solid #94a3b8;
+            padding: 5px 3px;
+            width: 12.5%;
+        }
+        .xy-table th {
+            background-color: var(--pastel-blue-dark);
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+        .coord-grid-box {
+            border: 1.5px solid #64748b;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Mini Graphs for MCQ Q11 */
+        .mini-graphs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        .mini-graph-item {
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 5px;
+            background: #f8fafc;
+        }
+
+        /* Page Break Utility */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 22px;
+            padding-top: 10px;
+            border-top: 2px solid var(--border-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 9mm 10mm;
+            }
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .action-bar {
+                display: none !important;
+            }
+            .booklet-container {
+                box-shadow: none;
+                max-width: 100%;
+                width: 100%;
+                padding: 0;
+                border-radius: 0;
+            }
+            .page-break {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Floating Bar (Hidden when printing to PDF) -->
+    <div class="action-bar">
+        <span>✨ Ready for A4 PDF Export (Enable "Background graphics" in print settings)</span>
+        <button class="print-btn" onclick="window.print()">🖨️ Print / Save Full Booklet as PDF</button>
+    </div>
+
+    <div class="booklet-container">
+
+        <!-- ==================== MASTER HEADER ==================== -->
+        <div class="master-header">
+            <div class="header-left">
+                <span class="badge-pill">Prep 3 • First Term • Algebra</span>
+                <h1>OCTOBER REVISION BOOKLET</h1>
+                <p>Golden Summary Rules & Comprehensive Worksheet (Unit 1 & Unit 2)</p>
+            </div>
+            <div class="header-right">
+                <h2>مستر أحمد عبدالمتعال</h2>
+                <span class="teacher-en">Mr. Ahmed Abd El-Motaal</span>
+                <div class="contact-info">📞 01019775590 &nbsp;|&nbsp; ▶ youtube.com/@mrmotaal</div>
+            </div>
+        </div>
+
+        <!-- Clean Student Info Strip -->
+        <div class="student-strip">
+            <div><span>Student Name:</span><span class="dotted-input"></span></div>
+            <div><span>Group:</span><span class="dotted-input"></span></div>
+            <div><span>Date:</span><span class="dotted-input"></span></div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 1: GOLDEN SUMMARY & RULES CHEAT SHEET                             -->
+        <!-- ========================================================================= -->
+        <div class="part-banner">
+            <span>PART 1: GOLDEN RULES & SUMMARY CHEAT SHEET</span>
+            <span>Unit 1 & Unit 2</span>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Unit 1: Laws of Powers & Exponential Equations</span>
+            <span>Lessons 1 & 2</span>
+        </div>
+
+        <div class="grid-3">
+            <div class="rule-card highlight">
+                <div class="card-title"><span>1. Power of a Power</span><span class="tag">In × Out</span></div>
+                <div class="rule-formula">$$(a^m)^n = a^{m \times n}$$</div>
+                <div class="example-box"><strong>Ex:</strong> $(x^2 y^3)^4 = x^8 y^{12}$</div>
+            </div>
+            <div class="rule-card">
+                <div class="card-title"><span>2. Multiplying Same Base</span><span class="tag">+ Powers</span></div>
+                <div class="rule-formula">$$a^m \times a^n = a^{m + n}$$</div>
+                <div class="example-box"><strong>Ex:</strong> $x^3 \times x^4 = x^7$<br><small>*Add: $2^a+2^a+2^a = 3 \times 2^a$</small></div>
+            </div>
+            <div class="rule-card">
+                <div class="card-title"><span>3. Dividing Same Base</span><span class="tag">− Powers</span></div>
+                <div class="rule-formula">$$\dfrac{a^m}{a^n} = a^{m - n}$$</div>
+                <div class="example-box"><strong>Ex:</strong> $\dfrac{x^5}{x^3} = x^{5-3} = x^2$</div>
+            </div>
+            <div class="rule-card">
+                <div class="card-title"><span>4. Negative Power</span><span class="tag">Flip Base</span></div>
+                <div class="rule-formula">$$\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^n$$</div>
+                <div class="example-box"><strong>Ex:</strong> $\left(\dfrac{x}{3}\right)^{-2} = \left(\dfrac{3}{x}\right)^2 = \dfrac{9}{x^2}$</div>
+            </div>
+            <div class="rule-card">
+                <div class="card-title"><span>5. Distributing Power</span><span class="tag">× and ÷ Only</span></div>
+                <div class="rule-formula">$$(a \times b)^n = a^n b^n , \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$</div>
+                <div class="example-box"><strong>Warning:</strong> Never distribute power over $+$ or $-$!</div>
+            </div>
+            <div class="rule-card warning">
+                <div class="card-title"><span>6. Negative Base $(-a)^n$</span><span class="tag">3 Cases</span></div>
+                <div class="example-box">
+                    • <strong>Even Power:</strong> Eats $(-)$ $\rightarrow (+)$<br>
+                    • <strong>Odd Power:</strong> Keeps $(-)$ $\rightarrow (-)$<br>
+                    • <strong>Zero Power ($a^0$):</strong> Always $= 1$
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="rule-card success">
+                <div class="card-title"><span>Exponential Eq. Case 1: Base = Base $\implies$ Power = Power</span></div>
+                <div class="rule-formula">$$\text{If } a^x = a^y \implies x = y \quad (a \notin \{0, 1, -1\})$$</div>
+                <div class="example-box">
+                    • Convert composite numbers into prime bases ($4 = 2^2, 8 = 2^3, 9 = 3^2, 27 = 3^3, 81 = 3^4, 125 = 5^3$).<br>
+                    • <strong>Reverse Split Trick:</strong> $2^{x+2} = 2^x \times 2^2$.
+                </div>
+            </div>
+            <div class="rule-card highlight">
+                <div class="card-title"><span>Exponential Eq. Case 2: When is Power = 0 ?</span><span class="tag">Gift Rule</span></div>
+                <div class="example-box">
+                    <strong>1) If RHS = 1:</strong> Equate the whole power to $0$.<br>
+                    &nbsp;&nbsp;&nbsp;• <strong>Ex:</strong> $5^{x-3} = 1 \implies x - 3 = 0 \implies x = 3$.<br>
+                    <strong>2) Different Bases with Same Power:</strong> If $a^x = b^x \implies \text{Power} = 0$.<br>
+                    &nbsp;&nbsp;&nbsp;• <strong>Ex:</strong> $5^{x+1} = 7^{x+1} \implies x + 1 = 0 \implies x = -1$.
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Unit 2: Quadratic, Polynomial & Rational Functions</span>
+            <span>Lessons 1, 2, 3 & 4</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="rule-card">
+                <div class="card-title"><span>Quadratic Form 1: Standard Form</span><span class="tag">$f(x) = ax^2 + bx + c$</span></div>
+                <div class="example-box">
+                    • <strong>Vertex $(x, y)$:</strong> First find $x = \dfrac{-b}{2a}$, then substitute $x$ in $f(x)$ to get $y$.<br>
+                    • <strong>$y$-intercept:</strong> Directly at $(0, c)$.
+                </div>
+            </div>
+            <div class="rule-card highlight">
+                <div class="card-title"><span>Quadratic Form 2: Vertex Form</span><span class="tag">$f(x) = a(x - h)^2 + k$</span></div>
+                <div class="example-box">
+                    • <strong>Vertex $= (h, k)$ directly:</strong> Take $h$ (inside bracket) with <strong>opposite sign</strong>, and $k$ (outside) with <strong>same sign</strong>.<br>
+                    • <strong>Special Form:</strong> $f(x) = x^2 \pm k \implies \text{Vertex} = (0, \pm k)$.
+                </div>
+            </div>
+        </div>
+
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th style="width: 27%;">Quadratic Requirement</th>
+                    <th>Rule / How to Find It</th>
+                    <th style="width: 31%;">Example: $f(x) = -(x - 3)^2 + 5$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Vertex & Axis of Symmetry</strong></td>
+                    <td>Vertex $= (h, k)$ &nbsp;|&nbsp; Equation of Axis of Symmetry is $x = h$.</td>
+                    <td>Vertex $= (3, 5)$ &nbsp;|&nbsp; Axis: $x = 3$</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Min. or Max. Value</strong></td>
+                    <td>If $a > 0$ ($\cup$): <strong>Minimum</strong> $= k$ &nbsp;|&nbsp; If $a < 0$ ($\cap$): <strong>Maximum</strong> $= k$.</td>
+                    <td>$a = -1 < 0 \implies$ Max. value $= 5$</td>
+                </tr>
+                <tr>
+                    <td><strong>3. $y$-intercept & $x$-intercept</strong></td>
+                    <td>• $y$-intercept: put $x = 0$ &nbsp;|&nbsp; • $x$-intercept (Roots): put $f(x) = 0$.</td>
+                    <td>$y$-intercept: $(0, -4)$</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="svg-row">
+            <div class="svg-box">
+                <svg width="110" height="55" viewBox="-60 -45 120 65">
+                    <line x1="-55" y1="0" x2="55" y2="0" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="0" y1="-40" x2="0" y2="15" stroke="#475569" stroke-width="1.5"/>
+                    <path d="M -30 -35 Q 0 25 30 -35" fill="none" stroke="#2563eb" stroke-width="2"/>
+                    <circle cx="-16" cy="0" r="3" fill="#dc2626"/><circle cx="16" cy="0" r="3" fill="#dc2626"/>
+                </svg>
+                <div><strong>Intersects $x$-axis at 2 points</strong> $\rightarrow$ 2 Real Roots</div>
+            </div>
+            <div class="svg-box">
+                <svg width="110" height="55" viewBox="-60 -45 120 65">
+                    <line x1="-55" y1="0" x2="55" y2="0" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="0" y1="-40" x2="0" y2="15" stroke="#475569" stroke-width="1.5"/>
+                    <path d="M -30 -35 Q 0 0 30 -35" fill="none" stroke="#2563eb" stroke-width="2"/>
+                    <circle cx="0" cy="0" r="3" fill="#dc2626"/>
+                </svg>
+                <div><strong>Touches $x$-axis at Vertex</strong> $\rightarrow$ 1 Real Root</div>
+            </div>
+            <div class="svg-box">
+                <svg width="110" height="55" viewBox="-60 -45 120 65">
+                    <line x1="-55" y1="0" x2="55" y2="0" stroke="#475569" stroke-width="1.5"/>
+                    <line x1="0" y1="-40" x2="0" y2="15" stroke="#475569" stroke-width="1.5"/>
+                    <path d="M -30 -38 Q 0 -8 30 -38" fill="none" stroke="#2563eb" stroke-width="2"/>
+                </svg>
+                <div><strong>No Intersection with $x$-axis</strong> $\rightarrow$ $Z(f) = \varnothing$</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="rule-card danger">
+                <div class="card-title"><span>Polynomial Condition & Real Zeros $Z(f)$</span><span class="tag">Domain = $\mathbb{R}$</span></div>
+                <div class="example-box">
+                    • Powers of $x$ must be <strong>non-negative integers</strong> $\{0, 1, 2, \dots\}$.<br>
+                    • <strong>NOT Polynomial:</strong> $x^{-n}$, $\sqrt{x}$, $\frac{1}{x}$, $2^x$.<br>
+                    • <strong>Shortcut:</strong> For $f(x) = x^2 + \text{positive number}$ (e.g., $x^2+9$), $Z(f) = \varnothing$.
+                </div>
+            </div>
+            <div class="rule-card highlight">
+                <div class="card-title"><span>Rational Function Rules $f(x) = \frac{\text{Num}}{\text{Den}}$</span></div>
+                <div class="example-box">
+                    • <strong>Domain:</strong> $\mathbb{R} \setminus \{\text{Zeros of Denominator}\}$.<br>
+                    • <strong>Set of Zeros $Z(f)$:</strong> $Z(\text{Numerator}) \setminus Z(\text{Denominator})$.<br>
+                    • <strong>Common Domain:</strong> $\mathbb{R} \setminus \{\text{All zeros of all denominators without repetition}\}$.
+                </div>
+            </div>
+        </div>
+
+        <div class="steps-flow">
+            <span>Golden Order to Simplify Rational Functions:</span>
+            <span class="step-pill">1. Factorize (Num & Den)</span>
+            <span>➔</span>
+            <span class="step-pill">2. Find Domain (BEFORE Canceling!)</span>
+            <span>➔</span>
+            <span class="step-pill">3. Cancel Common Factors</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="rule-card success">
+                <div class="card-title"><span>Equivalence of Two Rational Functions ($f_1 = f_2$)</span></div>
+                <div class="example-box">
+                    • $f_1 = f_2$ unconditionally if: <strong>1) $\text{Domain } f_1 = \text{Domain } f_2$</strong> AND <strong>2) Simplest Form $f_1 =$ Simplest Form $f_2$</strong>.<br>
+                    • If Simplest Forms are equal but Domains differ $\implies$ Equal <strong>in the Common Domain</strong>.
+                </div>
+            </div>
+            <div class="rule-card warning">
+                <div class="card-title"><span>Difference of Two Cubes ($x^3 - a^3$)</span></div>
+                <div class="example-box">
+                    • $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$ &nbsp;|&nbsp; $x^3 - 1 = (x - 1)(x^2 + x + 1)$.<br>
+                    • <strong>Note:</strong> The big bracket $(x^2 + ax + a^2)$ <strong>never factorizes</strong> and has <strong>no real zeros</strong>!
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 2: MULTIPLE CHOICE QUESTIONS (18 QUESTIONS)                       -->
+        <!-- ========================================================================= -->
+        <div class="page-break"></div>
+
+        <div class="part-banner">
+            <span>PART 2: MULTIPLE CHOICE QUESTIONS (CHOOSE THE CORRECT ANSWER)</span>
+            <span>Questions 1 – 18</span>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Group A: Unit 1 (Powers & Exponential Equations)</span>
+            <span>Questions 1 – 10</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">1</span><div class="q-content">Simplify: $(a^2)^4 \times a^5 = \dots$</div></div>
+                <div class="choices-row"><span>(a) $a^{11}$</span><span>(b) $a^{13}$</span><span>(c) $a^{40}$</span><span>(d) $a^3$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">2</span><div class="q-content">Find the value of $(x^2 y^3)^2$ when $x = 1, y = 2$:</div></div>
+                <div class="choices-row"><span>(a) $16$</span><span>(b) $32$</span><span>(c) $12$</span><span>(d) $64$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">3</span><div class="q-content">If $b = 3^{x+1}$, then $9^{x+1} = \dots$</div></div>
+                <div class="choices-row"><span>(a) $2b$</span><span>(b) $3b$</span><span>(c) $b^3$</span><span>(d) $b^2$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">4</span><div class="q-content">Simplify: $\dfrac{(-2a^2)^3}{2a} = \dots$</div></div>
+                <div class="choices-row"><span>(a) $-4a^5$</span><span>(b) $4a^5$</span><span>(c) $-3a^4$</span><span>(d) $-4a^6$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">5</span><div class="q-content">If $\dfrac{3^x \times 27^x}{81^x} = 2^{-2x}$, then $x = \dots$</div></div>
+                <div class="choices-row"><span>(a) $1$</span><span>(b) $0$</span><span>(c) $-2$</span><span>(d) $3$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">6</span><div class="q-content">If $4^{-x} = 8$, then $x = \dots$</div></div>
+                <div class="choices-row"><span>(a) $\dfrac{2}{3}$</span><span>(b) $\dfrac{3}{2}$</span><span>(c) $-\dfrac{2}{3}$</span><span>(d) $-\dfrac{3}{2}$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">7</span><div class="q-content">If $13^{n-5} = 1$, then $n = \dots$</div></div>
+                <div class="choices-row"><span>(a) $0$</span><span>(b) $1$</span><span>(c) $5$</span><span>(d) $-5$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">8</span><div class="q-content">If $5^{x+1} = 7^{x+1}$, then $x = \dots$</div></div>
+                <div class="choices-row"><span>(a) $-1$</span><span>(b) $1$</span><span>(c) $0$</span><span>(d) $5$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">9</span><div class="q-content">If $5^{x-3} = 1$, then $2^x = \dots$</div></div>
+                <div class="choices-row"><span>(a) $8$</span><span>(b) $6$</span><span>(c) $1$</span><span>(d) $9$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">10</span><div class="q-content">If $2^a + 2^a + 2^a = 24$, then $a = \dots$</div></div>
+                <div class="choices-row"><span>(a) $2$</span><span>(b) $3$</span><span>(c) $4$</span><span>(d) $8$</span></div>
+            </div>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Group B: Unit 2 (Quadratic, Polynomial & Rational Functions)</span>
+            <span>Questions 11 – 18</span>
+        </div>
+
+        <!-- Question 11 with 4 SVG Graphs -->
+        <div class="q-card" style="margin-bottom: 11px;">
+            <div class="q-header">
+                <span class="q-num">11</span>
+                <div class="q-content">Which of the following graphs represents the quadratic function $f(x) = x^2 - 1$?</div>
+            </div>
+            <div class="mini-graphs-grid">
+                <div class="mini-graph-item">
+                    <svg width="95" height="72" viewBox="-50 -40 100 80">
+                        <line x1="-45" y1="0" x2="45" y2="0" stroke="#94a3b8" stroke-width="1"/>
+                        <line x1="0" y1="-35" x2="0" y2="35" stroke="#94a3b8" stroke-width="1"/>
+                        <path d="M -10 -30 Q 15 0 40 -30" fill="none" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="15" cy="0" r="2.5" fill="#dc2626"/>
+                        <text x="10" y="13" font-size="8.5" fill="#1e293b">(1,0)</text>
+                    </svg>
+                    <div>(a)</div>
+                </div>
+                <div class="mini-graph-item">
+                    <svg width="95" height="72" viewBox="-50 -40 100 80">
+                        <line x1="-45" y1="0" x2="45" y2="0" stroke="#94a3b8" stroke-width="1"/>
+                        <line x1="0" y1="-35" x2="0" y2="35" stroke="#94a3b8" stroke-width="1"/>
+                        <path d="M -25 25 Q 0 -35 25 25" fill="none" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="0" cy="-5" r="2.5" fill="#dc2626"/>
+                        <text x="4" y="-8" font-size="8.5" fill="#1e293b">(0,1)</text>
+                    </svg>
+                    <div>(b)</div>
+                </div>
+                <div class="mini-graph-item">
+                    <svg width="95" height="72" viewBox="-50 -40 100 80">
+                        <line x1="-45" y1="0" x2="45" y2="0" stroke="#94a3b8" stroke-width="1"/>
+                        <line x1="0" y1="-35" x2="0" y2="35" stroke="#94a3b8" stroke-width="1"/>
+                        <path d="M -25 -25 Q 0 35 25 -25" fill="none" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="0" cy="5" r="2.5" fill="#dc2626"/>
+                        <text x="4" y="15" font-size="8.5" fill="#1e293b">(0,-1)</text>
+                    </svg>
+                    <div>(c)</div>
+                </div>
+                <div class="mini-graph-item">
+                    <svg width="95" height="72" viewBox="-50 -40 100 80">
+                        <line x1="-45" y1="0" x2="45" y2="0" stroke="#94a3b8" stroke-width="1"/>
+                        <line x1="0" y1="-35" x2="0" y2="35" stroke="#94a3b8" stroke-width="1"/>
+                        <path d="M -40 -30 Q -15 0 10 -30" fill="none" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="-15" cy="0" r="2.5" fill="#dc2626"/>
+                        <text x="-30" y="13" font-size="8.5" fill="#1e293b">(-1,0)</text>
+                    </svg>
+                    <div>(d)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">12</span><div class="q-content">The vertex of the curve $f(x) = (x - 3)^2 + 1$ is:</div></div>
+                <div class="choices-row"><span>(a) $(3, 1)$</span><span>(b) $(-3, 1)$</span><span>(c) $(3, -1)$</span><span>(d) $(-3, -1)$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">13</span><div class="q-content">The curve of $f(x) = x^2 + 3x - 4$ intersects the $y$-axis at:</div></div>
+                <div class="choices-row"><span>(a) $(0, -4)$</span><span>(b) $(-4, 0)$</span><span>(c) $(0, 4)$</span><span>(d) $(4, 0)$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">14</span><div class="q-content">The set of real zeros of $f(x) = x^2 + 4$ is:</div></div>
+                <div class="choices-row"><span>(a) $\{2, -2\}$</span><span>(b) $\{-2\}$</span><span>(c) $\{-4\}$</span><span>(d) $\varnothing$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">15</span><div class="q-content">The domain of $f(x) = \dfrac{x}{x^2 - 4x + 3}$ is:</div></div>
+                <div class="choices-row"><span>(a) $\mathbb{R} \setminus \{-3, -1\}$</span><span>(b) $\mathbb{R}$</span><span>(c) $\mathbb{R} \setminus \{3, 1\}$</span><span>(d) $\mathbb{R} \setminus \{0\}$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">16</span><div class="q-content">The domain of $f(x) = \dfrac{x + 1}{x^2 - 9}$ is:</div></div>
+                <div class="choices-row"><span>(a) $\mathbb{R} \setminus \{9\}$</span><span>(b) $\mathbb{R} \setminus \{3, -3\}$</span><span>(c) $\mathbb{R} \setminus \{3\}$</span><span>(d) $\mathbb{R} \setminus \{-1\}$</span></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">17</span><div class="q-content">The common domain of $f_1(x) = \dfrac{x}{x + 1}$ and $f_2(x) = \dfrac{x + 2}{x(x - 7)}$ is:</div></div>
+                <div class="choices-row three-cols"><span>(a) $\mathbb{R} \setminus \{-1, 0, 7\}$</span><span>(b) $\mathbb{R} \setminus \{1, 0, -7\}$</span><span>(c) $\mathbb{R} \setminus \{-1, 7\}$</span></div>
+            </div>
+            <div class="q-card" style="grid-column: span 2;">
+                <div class="q-header"><span class="q-num">18</span><div class="q-content">If $f(x) = \dfrac{x^2 - x - 2}{x^2 + x - 6}$, then the value of $x$ that makes $f(x) = \dfrac{3}{5}$ is:</div></div>
+                <div class="choices-row"><span>(a) $2$</span><span>(b) $-3$</span><span>(c) $\{2, -3\}$</span><span>(d) $\varnothing$</span></div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 3: ESSAY QUESTIONS (30 QUESTIONS WITH WORKSPACES)                 -->
+        <!-- ========================================================================= -->
+        <div class="part-banner">
+            <span>PART 3: ESSAY QUESTIONS (WRITE DETAILED STEPS)</span>
+            <span>Questions 1 – 30</span>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Group A: Unit 1 (Simplify & Solve Exponential Equations)</span>
+            <span>Questions 1 – 12</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">1</span><div class="q-content">Simplify to the simplest form: $\dfrac{(m^5)^5}{(-m^2)^6}$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">2</span><div class="q-content">Simplify to the simplest form: $q^2 \times (q^2)^2$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">3</span><div class="q-content">If $5^y = 4$, find the numerical value of $125^y$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">4</span><div class="q-content">If $2^x = 5$, find the numerical value of: $3 \times 2^{x+2} - 8^x$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">5</span><div class="q-content">Simplify $\dfrac{4^x \times 9^{2-x}}{6^{2x}}$ to the simplest form, then find its value when $x = 1$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">6</span><div class="q-content">Simplify to the simplest form: $\dfrac{11 \times 6^x \times 11^{x-3}}{66^x}$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">7</span><div class="q-content">Find the value of $x$ if: $3^{x-1} = 27$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">8</span><div class="q-content">Find the value of $x$ if: $2^{2x-1} = \dfrac{1}{32}$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">9</span><div class="q-content">Find the value of $x$ if: $\dfrac{3^x \times 21^x}{7^x} = 243$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">10</span><div class="q-content">Find the value of $x$ if: $10^{2x-1} = \dfrac{1}{1000}$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">11</span><div class="q-content">Find the solution set in $\mathbb{R}$: $5^{x^2 - 4} = 125$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">12</span><div class="q-content">Find the value of $m$ if: $3^{-2m+1} \times (9)^{2m} = \dfrac{1}{27}$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+        </div>
+
+        <div class="unit-subbanner">
+            <span>Group B: Unit 2 (Quadratic, Polynomial & Rational Functions)</span>
+            <span>Questions 13 – 30</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">13</span><div class="q-content">Find the minimum value of the quadratic function: $f(x) = x^2 - 3x - 4$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">14</span><div class="q-content">If $(m, n)$ is the vertex of the curve of $f(x) = x^2 - 2x - 2$, find the value of $n$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+        </div>
+
+        <div class="stack-list">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">15</span><div class="q-content">If the $x$-coordinate of the vertex of the curve of the function $f(x) = ax^2 + 16x + 5$ is $-4$, find the value of $a$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+
+            <!-- Question 16 with Table & Coordinate Grid -->
+            <div class="q-card">
+                <div class="q-header">
+                    <span class="q-num">16</span>
+                    <div class="q-content">
+                        Graph the quadratic function $f(x) = (x - 1)^2 + 3$, then from the graph find:
+                        <ul class="sub-list">
+                            <li>The vertex of the curve &nbsp;|&nbsp; The equation of the axis of symmetry &nbsp;|&nbsp; The minimum or maximum value.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="graph-workspace">
+                    <div>
+                        <table class="xy-table">
+                            <tr><th>$x$</th><td>$-2$</td><td>$-1$</td><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr>
+                            <tr><th>$f(x)$</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                        </table>
+                        <div class="answer-space" style="margin-top: 12px; gap: 18px;">
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                        </div>
+                    </div>
+                    <div class="coord-grid-box">
+                        <svg width="210" height="200" viewBox="0 0 210 200">
+                            <defs>
+                                <pattern id="grid16" width="15" height="15" patternUnits="userSpaceOnUse">
+                                    <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+                                </pattern>
+                            </defs>
+                            <rect width="210" height="200" fill="url(#grid16)" />
+                            <line x1="0" y1="165" x2="210" y2="165" stroke="#1e293b" stroke-width="1.8"/>
+                            <line x1="75" y1="0" x2="75" y2="200" stroke="#1e293b" stroke-width="1.8"/>
+                            <text x="198" y="160" font-size="10" font-weight="bold" fill="#1e3a8a">x</text>
+                            <text x="80" y="12" font-size="10" font-weight="bold" fill="#1e3a8a">y</text>
+                            <text x="65" y="177" font-size="9" fill="#475569">0</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 17 with Table & Coordinate Grid -->
+            <div class="q-card">
+                <div class="q-header">
+                    <span class="q-num">17</span>
+                    <div class="q-content">Graph the quadratic function $f(x) = x^2 - 7x + 12$, then find the vertex of the curve and the minimum value of the function.</div>
+                </div>
+                <div class="graph-workspace">
+                    <div>
+                        <table class="xy-table">
+                            <tr><th>$x$</th><td>$1$</td><td>$2$</td><td>$3$</td><td>$3.5$</td><td>$4$</td><td>$5$</td><td>$6$</td></tr>
+                            <tr><th>$f(x)$</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                        </table>
+                        <div class="answer-space" style="margin-top: 12px; gap: 18px;">
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                            <div class="dot-line"></div>
+                        </div>
+                    </div>
+                    <div class="coord-grid-box">
+                        <svg width="210" height="200" viewBox="0 0 210 200">
+                            <defs>
+                                <pattern id="grid17" width="15" height="15" patternUnits="userSpaceOnUse">
+                                    <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+                                </pattern>
+                            </defs>
+                            <rect width="210" height="200" fill="url(#grid17)" />
+                            <line x1="0" y1="150" x2="210" y2="150" stroke="#1e293b" stroke-width="1.8"/>
+                            <line x1="45" y1="0" x2="45" y2="200" stroke="#1e293b" stroke-width="1.8"/>
+                            <text x="198" y="145" font-size="10" font-weight="bold" fill="#1e3a8a">x</text>
+                            <text x="50" y="12" font-size="10" font-weight="bold" fill="#1e3a8a">y</text>
+                            <text x="35" y="162" font-size="9" fill="#475569">0</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">18</span><div class="q-content">Find the set of real zeros of: $f(x) = x^2 + 9$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">19</span><div class="q-content">Find the set of real zeros of: $q(x) = -10x - 5$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">20</span><div class="q-content">Find the set of real zeros of: $f(x) = x^2 - 5x - 24$</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">21</span><div class="q-content">If $-3$ is one of the real zeros of $f(x) = x^2 + bx - 14$, find the value of $b$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">22</span><div class="q-content">Find the set of values of $x$ that make $f(x) = \dfrac{x - 1}{x^2 - 5x + 6}$ undefined.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">23</span><div class="q-content">For $n(x) = \dfrac{x^2 - 25}{x - 5}$, find the domain of $n(x)$, then find $n(5)$ and $n(-5)$ if possible.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">24</span><div class="q-content">Put $n(x) = \dfrac{x^2 + 2x - 15}{x^2 - 5x + 6}$ in the simplest form, showing its domain.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">25</span><div class="q-content">Find the common domain of $f(x) = \dfrac{x}{x^2 - x - 6}$ and $g(x) = \dfrac{x + 1}{x^2 - 4}$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+        </div>
+
+        <div class="stack-list">
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">26</span><div class="q-content">If the common domain of $f_1(x) = \dfrac{7}{x - k}$ and $f_2(x) = \dfrac{x + 2}{x + 5}$ is $\mathbb{R} \setminus \{-5, 3\}$, find the value of $k$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">27</span><div class="q-content">Prove that $f_1 = f_2$ where: $f_1(x) = \dfrac{x^2}{x^3 - x^2}$ and $f_2(x) = \dfrac{x^3 + x^2 + x}{x^4 - x}$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">28</span><div class="q-content">Prove that $f_1(x) = f_2(x)$ for all values of $x$ belonging to the common domain, and find this common domain: $f_1(x) = \dfrac{x^2 - 4}{x^2 - 2x}$ and $f_2(x) = \dfrac{x + 2}{x}$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">29</span><div class="q-content">Show whether $f_1 = f_2$ or not (with reason), and if they are equal in the common domain, find it: $f_1(x) = \dfrac{x^2}{x^3 - x^2}$ and $f_2(x) = \dfrac{x^2 + x + 1}{x^3 - 1}$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+            <div class="q-card">
+                <div class="q-header"><span class="q-num">30</span><div class="q-content">Prove that $f_1(x) = f_2(x)$ in the common domain and find this domain, where: $f_1(x) = \dfrac{x}{x^2 - 2x}$ and $f_2(x) = \dfrac{x^2 + 2x + 4}{x^3 - 8}$.</div></div>
+                <div class="answer-space"><span class="answer-label">Solution:</span><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div><div class="dot-line"></div></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span>October Revision Full Booklet • Prep 3 Algebra</span>
+            <span>Mr. Ahmed Abd El-Motaal | 📞 01019775590 | ▶ youtube.com/@mrmotaal</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
